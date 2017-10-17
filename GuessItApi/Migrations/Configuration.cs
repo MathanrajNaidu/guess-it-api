@@ -1,10 +1,10 @@
 namespace GuessItApi.Migrations
 {
-    using GuessItApi.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using GuessItApi.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<GuessItApi.Models.GuessItApiContext>
     {
@@ -27,10 +27,12 @@ namespace GuessItApi.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
             context.HallOfFames.AddOrUpdate(
                 x => x.Id,
-                new HallOfFame { Name = "Player 1", NumberOfAttempts = 100, PlayTime = (new DateTime()).ToUniversalTime() }
-            );
+                new HallOfFame { Name = "test", NumberOfAttempts = 2, PlayTime = DateTime.Now });
+
+
         }
     }
 }

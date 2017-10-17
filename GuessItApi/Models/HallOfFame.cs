@@ -13,8 +13,6 @@ namespace GuessItApi.Models
         [Required]
         public string Name { get; set; }
         public int NumberOfAttempts { get; set; }
-        [DisplayName("PlayTime")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime PlayTime { get; set; }
     }
 }
